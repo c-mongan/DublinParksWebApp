@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Users</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+</head>
+<body>
+<div class="container fluid text-center"/>
+<div><h2>[[${council.Name}]]</h2></div>
+<div class = "m-2">
+</div>
+
+<a class ="h4 mr-3" th:href="@{'/councils/edit/' + ${council.id}}">Edit</a>
+
+<a class ="h4 mr-3" th:href="@{'/councils/delete/' + ${council.id}}">Delete</a>
+
+<a class ="h4 mr-3" th:href="@{/councils/}">Back</a>
+
+<div th:if="${message}" class="alert alert-success text-center">
+    [[${message}]]
+</div>
+
+<table class="table table-bordered">
+    <thead class= "thead-dark">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Full Address</th>
+        <th>Opening Hours</th>
+        <th>Phone Number</th>
+        <th>E-Mail</th>
+        <th>Park Type</th>
+        <th>Website</th>
+        <th>Park Category</th>
+        <th>Park Surface Type</th>
+        <th>Additional Information</th>
+        <th>Accessible Play Items</th>
+        <th>Disabled Parking</th>
+        <th>Park Ranger</th>
+        <th>Toilets</th>
+        <th>Disabled Toilets</th>
+        <th>Baby Changing Rooms</th>
+        <th>Seating</th>
+        <th>Drinking Water</th>
+
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+
+
+
+
+
+        <!--      <td> <a class ="h4 mr-3" th:href="@{'/councils/edit/' + ${council.id}}">Edit</a>-->
+        <!--        <a class ="h4" th:href="@{'/councils/delete/' + ${council.id}}">Delete</a>-->
+        <!--      </td>-->
+        <!--      <a class ="h4" th:href="@{'/councils/viewcouncil/' + ${council.id}}">View</a>-->
+        <!--      </td>-->
+        <!--    </tr>-->
+          </th:block>
+    </tbody>
+</table>
+
+</div>
+
+</div>
+</body>
+</html>

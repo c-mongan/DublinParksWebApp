@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Manage Users</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+</head>
+<body>
+<div class="container fluid text-center"/>
+<div><h2>View Park</h2></div>
+
+<div th:if="${message}" class="alert alert-success text-center">
+  [[${message}]]
+</div>
+
+<table class="table table-bordered">
+  <thead class= "thead-dark">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <th:block th:each="park : ${listOfParks}">
+    <tr>
+      <td>[[${park.id}]]</td>
+      <td>[[${park.Name}]]</td>
+      <td>[[${park.Council_Name}]]</td>
+      <td>[[${park.Facilities}]]</td>
+
+
+
+
+
+      <td>   <a class ="h4" th:href="@{'/parks/view/' + ${park.id}}">View</a>
+
+
+      </td>
+
+      </td>
+    </tr>
+  </th:block>
+  </tbody>
+</table>
+
+</div>
+
+</div>
+</body>
+</html>

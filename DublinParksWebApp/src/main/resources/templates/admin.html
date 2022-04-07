@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to the app</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+</head>
+<body>
+<div class="container fluid text-center">
+    <h1>Welcome</h1>
+
+    <div><a class="h2" th:href="@{/users}" >Manage Users</a></div>
+
+    <div><a class="h2" th:href="@{/parks}" >Manage Parks</a></div>
+
+    <div><a class="h2" th:href="@{/parks/fingal}" >View Fingal Parks</a></div>
+
+    <div><a class="h2" th:href="@{/parks/dlr}" >View DLR Parks</a></div>
+
+    <div><a class="h2" th:href="@{/parks/dublincity}" >View Dublin City Parks</a></div>
+
+    <a class="h2" th:href="@{/councils}" >Manage Councils</a>
+
+
+</div>
+</body>
+</html>
